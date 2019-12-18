@@ -1,0 +1,80 @@
+@media screen and (max-device-width: 1200px), screen and (max-width: 1200px) {
+    html {
+		font-size: 1em;
+        body {
+            
+        }   
+    }
+}
+
+@media screen and (max-device-width: 960px), screen and (max-width: 960px) {
+  
+}
+
+@media screen and (max-device-width: 720px), screen and (max-width: 720px) {
+	html {
+		body {
+				
+		}
+	}
+	
+	
+    #header-bar {
+		padding: 1em calc( 3% + 1vw ) .5em;
+		header {
+			width: 40%;
+			padding: 0;
+			position: relative;
+			z-index: 10;
+		}
+		nav {
+			position: relative;
+			z-index: 5;
+			.res-btn {
+				position: relative;
+				z-index: 8;
+				display: block;
+				width: 5vw;
+				
+			}
+
+			.menu-main-menu-container {
+				position: fixed;
+				left: 100%;
+				width: 100%;
+				padding-top: 3em;
+				background-color: $white;
+				transition: left 1s;
+				padding-left: calc( 3% + 1vw );
+				&.res-open {
+					left: 0;	
+				}
+				
+				#menu-main-menu {
+					@include flex-direction(column);
+					li {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+	
+	.header-image-box {
+		height: 5em;
+	}
+	
+	column {
+		padding: 1em 3%;	
+	}
+	
+	.single-site-main {
+		.article-con {
+			margin: 0 3%;
+			@include flex-direction(column-reverse);
+			.article-content-con {
+				width: 100%;
+			}
+		}
+	}
+}
