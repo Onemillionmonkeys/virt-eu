@@ -42,7 +42,8 @@
 				position: fixed;
 				left: 100%;
 				width: 100%;
-				padding-top: 3em;
+				padding-top: 5em;
+                padding-bottom: 1em;
 				background-color: $white;
 				transition: left 1s;
 				padding-left: calc( 3% + 1vw );
@@ -61,7 +62,19 @@
 	}
 	
 	.header-image-box {
-		height: 5em;
+		height: 6em;
+        &.header-image-box-frontpage {
+            height: 12em;
+		    .main-title-box {
+                margin: 4em 0 0vw 2vw;
+                width: 75%;
+            }
+        }
+        
+        .main-title-box {
+            padding: 0 .5em .25em;
+            margin: 0 0 1em 2vw;
+        }
 	}
 	
 	column {
@@ -70,11 +83,76 @@
 	
 	.single-site-main {
 		.article-con {
-			margin: 0 3%;
+			margin: 0 2vw;
 			@include flex-direction(column-reverse);
 			.article-content-con {
 				width: 100%;
+                .content-box {
+                    margin-bottom: 1em;
+                    &.content-box-workshop .workshop-step .step-num {
+                        width: 10%;
+                        height: 3em;
+                    }
+                }
 			}
+            
+            aside {
+                width: 100%;
+                margin: 0;
+            }
 		}
 	}
+    
+    .content-box {
+        padding: 0;
+        margin-bottom: 1em;
+        &.content-box-width-1, &.content-box-width-2, &.content-box-width-3, &.content-box-width-4, &.content-box-width-5, &.content-box-width-6 {
+		    width: calc(100%);
+	    }
+	}
+    
+    .content-box-profiles {
+        .profile {
+            width: calc(100% / 3);
+        }
+    }
+    
+    .content-box-video {
+	   &.content-box-width-3 {
+            iframe {
+                height: 50vw;
+            }
+        }
+        &.content-box-width-4 {
+            iframe {
+                height: 50vw;
+            }
+        }
+    }
+    
+    .column-title {
+        margin: 0 0 1em;
+    }
+    
+    .filter-column {
+        padding: .5em 2vw 0vw 2vw;
+    }
+    
+    
+    
+    footer {
+        padding: 1em 0 2em;
+        .footer-thumb {
+            width: calc( 10% + 1em );
+            margin: 0 1em 0 2vw;
+        }
+        
+        .footer-socials {
+            margin-right: 2vw;
+            a {
+                width: 1.5em;
+                margin-left: .5em;
+            }
+        }
+    }
 }

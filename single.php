@@ -77,6 +77,7 @@
 							if($postTypeTitle != "workshop") {
 								echo ' | '.get_the_date('F j, Y').'</h3>'; 
 							}
+                            echo '</h3>';
 						?>
 						<?php 
 							include('single-content.php'); 
