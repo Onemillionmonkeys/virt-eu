@@ -24,7 +24,8 @@ get_header(); ?>
 			<article>
 				<?php
 					if($_GET['filter'] && $_GET['filter'] != 'all') {
-						$urlVar = $posttypes = $_GET['filter'];
+						$posttypes = array($_GET['filter']);
+						$urlVar = $_GET['filter'];
 						 
 					} else {
 						$posttypes = array('workshop','story','ethical-review');
