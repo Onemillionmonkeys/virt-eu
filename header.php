@@ -4,11 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
-	<?php if(is_front_page()) { ?>
-    	<title><?php bloginfo('name'); ?></title>
-	<?php } else { ?>
-		<title><?php bloginfo('name'); ?> <?php the_title(); ?></title>
-	<?php } ?>
+	<title><?php bloginfo('name'); if(is_front_page()) { bloginfo('name'); echo ' '; the_title(); } ?></title>
     <link href="<?php echo get_the_permalink(); ?>" rel="canonical" />
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
     <script src="<?php echo bloginfo('url'); ?>/wp-includes/js/jquery/jquery.js" type="text/javascript"></script>
