@@ -28,6 +28,7 @@
 		endif;
 		?>
 	</footer><!-- #colophon -->
+	<!--
 	<div class="cookies">
 		<div class="cookie-con">
 			<div class="cookie-content">
@@ -50,7 +51,7 @@
 			</div>
 		</div>
 	</div>
-		
+	-->	
 		
 
 </div><!-- #page -->
