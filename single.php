@@ -25,15 +25,16 @@
 				<?php 
 					if(get_field('header_image')) {
 						echo '<column>';
-							$size = 'singleheaderimage';
-							$headerimage = get_field('header_image');
+						$size = 'singleheaderimage';
+						$headerimage = get_field('header_image');
+						if (!empty($headerimage['ID'])) {
 							echo '<figure class="content-box content-box-img content-box-width-6" galnum="'.++$galnum.'" galurl="'.$headerimage['url'].'">';
-							
 							echo wp_get_attachment_image($headerimage['ID'], $size);
 							if($headerimage['description'] != '') {
 								echo '<figcaption>'.$headerimage['caption'].'</figcaption>';
 							}
 							echo '</figure>';
+						}
 						echo '</column>';
 					} 
 				?>
